@@ -73,7 +73,7 @@ process_logfile(){
 done
 }
 
-for logfile in /logs/proxy-host-*_access.log; do
+for logfile in /nginx/access.log* /nginx/*_proxy.log; do
   process_logfile "$logfile" &
 done
 
